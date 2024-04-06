@@ -1,0 +1,402 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@400..700&display=swap'); */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+::selection{
+  background-color: #927b2e;
+}
+@font-face {
+  font-family:main;
+  src: url(./font/BROWN\ VOLKY.ttf);
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotateY {
+  0% {
+    transform: rotateX("0deg");
+    font-family: ANDMOREY;
+  }
+  50% {
+    transform: rotateX("0deg");
+    font-family: ANDMOREY Outline;
+  }
+  100% {
+    transform: rotateX("0deg");
+    font-family: ANDMOREY;
+  }
+}
+body{
+   font-family:main;
+   color: #000000;
+  
+}
+#logo h1 {
+  animation: 1s linear infinite rotateY;
+}
+#DarkMode img:hover {
+  animation: 10s linear infinite rotate;
+}
+
+
+@keyframes rotateZ {
+  0% {
+    background-position: start;
+    background-position-x: right;
+  }
+  100% {
+    background-position-x: left;
+    background-position: end;
+  }
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+  
+}
+/* #page1{
+  background-image: url(assests/2k_stars_milky_way.jpg);
+} */
+
+.opacity:hover {
+  opacity: 100%;
+}
+@keyframes opacity {
+  0% {
+    opacity: 15%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+#page3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:static;
+}
+.flip-card-container {
+  border: #927b2e 3px solid;
+  display: flex;
+  flex-wrap: nowrap;
+  /* width: 100%; Adjust width as needed */ /* Center the container horizontally */
+  gap: 10vw;
+  overflow: hidden;
+  /* padding-left: 10vw; */
+  /* padding-top:5vw ; */
+  /* padding-bottom: 5vw; */
+  width: 85vw;
+ padding-top:10vh;
+ padding-bottom:10vh;
+ padding-left:3vw;
+
+  border-radius: 10px;
+}
+
+.flip-card {
+  /* background: url(assests/Untitled\ design.png); */
+  width: 20vw; /* Adjust card width as needed */
+  height: 30vw; /* Adjust card height as needed */
+  /* margin: 10px; Add spacing between cards */
+  perspective: 1000px; /* Create 3D effect */
+  object-fit:cover;
+  object-position: center;
+}
+
+.flip-card-inner {
+  border:#927b2e solid 2px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s; /* Adjust transition speed as desired */
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+ 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size:2vw;
+  font-weight: bolder;
+  color: #927b2e  ;
+
+}
+#circle{
+  position: fixed;
+  z-index: 999;
+  top: 20vh;
+  /* left: 50%; */
+  left: -23vw;
+  /* background: url(assests/gradient-golden-luxury-frame-template/5691794.jpg); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+}
+#text{
+  color:#000000;
+  font-size: 5vw;
+}
+
+.flip-card-back {
+  background-color: #193644;
+  /* padding: 20px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size:2vw;
+  font-weight: bolder;
+  color: #927b2e  ;
+  font-size:2vw;
+  /* color: #927b2e  ; */
+  transform: rotateY(180deg);
+}
+
+
+#circle:hover{
+  left:-12vw
+
+}
+/* Add content styling as needed (e.g., headings, text, images) */
+.circle {
+  position: relative;
+  width: 200px / 2;
+  height: 200px;
+  border-radius: 50%;
+  /* background: #ccc; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  /* background: url(img/Foto\ 1.jpg); */
+  background-size: cover;
+  border-radius: 50%;
+  /* filter: brightness(1.5) contrast(1.5); */
+}
+
+.text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rotateText 10s linear infinite;
+}
+
+@keyframes rotateText {
+  0% {
+      transform: rotate(-360deg);
+  }
+  100% {
+      transform: rotate(0deg);
+  }
+}
+.rotateText{
+   animation: rotateText 10s linear infinite;
+   width: 4vw;
+   color: #000000;
+}
+
+.text span {
+  position: absolute;
+  left: 50%;
+  font-size: 1.2em;
+  transform-origin: 0 100px;
+}
+#LOGO1{
+  background-color: black;
+}
+
+.topcepage{
+  color: #927b2e;
+  background-color: #041721;
+  /* color: #927b2e; */
+  
+/* background: linear-gradient(90deg, hsla(204, 67%, 8%, 1) 1%, hsla(220, 78%, 29%, 1) 100%); */
+}
+.border{
+  border: #927b2e 5px solid;
+  border-radius: 15px;
+
+}
+#containerpage2 { margin: 0%;  color:#927b2e; }
+
+#circlepage2 { position: relative; width: 100%; padding-bottom: 100%; overflow: hidden;  color:#927b2e; }
+
+#circlepage2 text { font-family: 'Helvetica Neue', Arial; font-size: 16px; font-weight: bold; color:#927b2e; }
+
+#circlepage2 svg { position: absolute; left: 0; top: 0; width: 100%; height: 540px; color:#927b2e;
+
+  -webkit-animation-name: rotatepage2;
+     -moz-animation-name: rotatepage2;
+      -ms-animation-name: rotatepage2;
+       -o-animation-name: rotatepage2;
+          animation-name: rotatepage2;
+  -webkit-animation-duration: 5s;
+     -moz-animation-duration: 5s;
+      -ms-animation-duration: 5s;
+       -o-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+     -moz-animation-iteration-count: infinite;
+      -ms-animation-iteration-count: infinite;
+       -o-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+     -moz-animation-timing-function: linear;
+      -ms-animation-timing-function: linear;
+       -o-animation-timing-function: linear;
+          animation-timing-function: linear;
+
+}
+
+@-webkit-keyframes rotatepage2 {
+    from { -webkit-transform: rotate(360deg); }
+    to { -webkit-transform: rotate(0); }
+}
+@-moz-keyframes rotatepage2 {
+    from { -moz-transform: rotate(360deg); }
+    to { -moz-transform: rotate(0); }
+}
+@-ms-keyframes rotatepage2 {
+    from { -ms-transform: rotate(360deg); }
+    to { -ms-transform: rotate(0); }
+}
+@-o-keyframes rotatepage2 {
+    from { -o-transform: rotate(360deg); }
+    to { -o-transform: rotate(0); }
+}
+@keyframes rotatepage2 {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0); }
+}
+#imgepage2{
+  position: relative;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  /* background: #ccc; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  /* overflow: hidden; */
+}
+.video{
+  width: 25vw;
+  height: 25vw;
+ 
+}
+.video1{
+  width: 30vw;
+  height: 30vw;
+ 
+
+}
+::-webkit-scrollbar {
+  width: 5px;
+  
+}
+.colorburn{
+  mix-blend-mode:color-burn;
+}
+
+.fatface-regular {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+  /* font-size: 1vh; */
+  font-size: 2rem;
+  color: #fff2c6;
+}
+.borderbt{
+  border-bottom: #927b2e 1px solid;
+  border-radius: 15px;
+  color: #f3c633;
+}
+.imagetable {
+  rotate: "90deg";
+}
+.boxshadow{
+  box-shadow: 0px 0px 10px black;
+}
+.animation:hover {
+transform: scale(1.1);
+  
+}
+.bordermap{
+  border: #927b2e 5px solid;
+  border-radius: 15px;
+}
+.bordermind{
+  border: #927b2e 5px solid;
+  /* border-radius: 15px; */
+}
+/* .animate-flicker {
+  font-size: 1.5em;
+  text-align: center; 
+  animation: flickerAnimation 0.5s infinite; 
+} */
+
+/* @keyframes flickerAnimation {
+  0% { opacity: 1; }
+  50% { opacity: 0; } 
+  100% { opacity: 1; }
+} */
+.videoOURJU {
+  margin: 0 auto;
+  display: block; 
+}
+.background {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent; 
+}
+
+.text-pop {
+  position: absolute; /* Absolute positioning for random placement */
+  color:aliceblue; /* Text color */
+  font-size: 3vw; /* Adjust font size */
+  opacity: 0; /* Initially invisible */
+  animation: popAnimation 2s ease-in-out; /* Animation name, duration, and easing */
+}
+
+@keyframes popAnimation {
+  0% { opacity: 0; transform: scale(0); } /* Start invisible and zoomed out */
+  50% { opacity: 0.4; transform: scale(1.2); } /* Pop in and zoom in at mid-animation */
+  100% { opacity: 0; transform: scale(1); } /* Fade out and maintain size at the end */
+}
